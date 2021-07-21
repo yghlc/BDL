@@ -98,7 +98,7 @@ def main():
     
     for index, batch in enumerate(targetloader):
         if index % 100 == 0:
-            print '%d processd' % index
+            print ('%d processd' % index)
         image, _, name = batch
         output = model(Variable(image).cuda())
         output = nn.functional.softmax(output, dim=1)
